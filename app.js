@@ -1949,7 +1949,20 @@ function centimeters(distance) {
 }
 // Chapter # 38-42 Qno 9
 function assignment38_42Q9() {
-    document.write("<p>Click on Refresh to go back home page</p>");
+    var empHours = parseInt(prompt("Employee total working hours?"));
+    var overtimeRate = 12;
+    var overtimeHours;
+    var totalAmount;
+    if(empHours >= 40){
+        overtimeHours = empHours - 40;
+        totalAmount = overtimeHours * overtimeRate;
+        document.write("<p>Overtime Hours = " + overtimeHours + " and Overtime total amount = " + totalAmount + " Rs</p>");
+        document.write("<p>Click on Refresh to go back home page</p>");
+    }
+    else {
+        document.write("<p>There is no overtime for less than 40 hours</p>");
+        document.write("<p>Click on Refresh to go back home page</p>");
+    }
 }
 // Chapter # 38-42 Qno 10
 function assignment38_42Q10() {
